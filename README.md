@@ -1,6 +1,7 @@
 # Jarkom-Modul-1-ITA02-2022
 
 Hasil Pengerjaan Soal Shift Praktikum SISTEM OPERASI 2022
+
 Anggota Kelompok:
 1. Muhammad Faris Anwari (5027201008)
 2. Calvindra Laksmono Kumoro (5027201020)

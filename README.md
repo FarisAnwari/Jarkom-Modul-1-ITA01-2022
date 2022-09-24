@@ -1,6 +1,6 @@
 # Jarkom-Modul-1-ITA02-2022
 
-Hasil Pengerjaan Soal Shift Praktikum SISTEM OPERASI 2022
+Hasil Pengerjaan Modul 1 Praktikum Komunikasi Data & Jaringan Komputer 2022
 
 Anggota Kelompok:
 1. Muhammad Faris Anwari (5027201008)

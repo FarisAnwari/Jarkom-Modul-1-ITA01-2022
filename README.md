@@ -17,3 +17,9 @@ Sebelumnya praktikan menginput command [ip a] di terminal untuk mengetahui IP pr
 
 ![ip a](./img/7_ip.jpg)
 
+Sehingga didapat IP praktikan ialah `192.168.89.130`
+
+Capture Filter: 
+> src host 192.168.89.130
+
+![capture](./img/7_cap.jpg)

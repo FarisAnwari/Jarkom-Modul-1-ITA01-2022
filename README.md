@@ -15,4 +15,5 @@ Anggota Kelompok:
 
 Sebelumnya praktikan menginput command [ip a] di terminal untuk mengetahui IP praktikan
 
+![ip a](./img/7_ip.jpg)
 

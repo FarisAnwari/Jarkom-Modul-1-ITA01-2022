@@ -1,4 +1,4 @@
-# Jarkom-Modul-1-ITA01-2022
+# Jarkom-Modul-1-ITA02-2022
 
 Hasil Pengerjaan Soal Shift Praktikum SISTEM OPERASI 2022
 Anggota Kelompok:

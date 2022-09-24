@@ -10,7 +10,7 @@ Anggota Kelompok:
 
 ## Soal 4-6
 ### 4. Filter sehingga wireshark hanya mengambil paket yang berasal dari port 21!
-Untuk soal, karena packet sudah ada di .pcapng, maka buka Wireshark dan open filenya, lalu terapkan Read Filter (sintaks sama dengan display filter, meskipun pada efeknya mirip capture filter bagi file .pcapng)
+Untuk soal ini, karena packet sudah ada di .pcapng, maka buka Wireshark dan open filenya, lalu terapkan Read Filter (sintaks sama dengan display filter, meskipun pada efeknya mirip capture filter bagi file .pcapng)
 
 ```
 tcp.srcport == 21 || udp.srcport == 21
@@ -20,13 +20,14 @@ tcp.srcport == 21 || udp.srcport == 21
 
 
 ### 5. Filter sehingga wireshark hanya mengambil paket yang berasal dari port 443!
-Untuk soal 4-5, karena packet sudah ada di .pcapng, maka buka Wireshark dan open filenya, lalu terapkan Read Filter (sintaks sama dengan display filter, meskipun pada efeknya mirip capture filter bagi file .pcapng)
+Untuk soal ini, karena packet sudah ada di .pcapng, maka buka Wireshark dan open filenya, lalu terapkan Read Filter (sintaks sama dengan display filter, meskipun pada efeknya mirip capture filter bagi file .pcapng)
 
 ```
 tcp.srcport == 443 || udp.srcport == 443
 ```
 <img width="419" alt="modul1-5 1" src="https://user-images.githubusercontent.com/58323466/192100270-d657aea5-37ca-4de0-8d34-1ee4bdb7741f.png">
 <img width="960" alt="modul1-5 2" src="https://user-images.githubusercontent.com/58323466/192100273-92dcd1ca-05ba-43a0-89ee-2d2e11e931f9.png">
+
 
 ### 6. Filter sehingga wireshark hanya menampilkan paket yang menuju ke lipi.go.id!
 Pertama kita melakukan pengecekan ip pada website lipi.go.id ke dalam terminal dengan menggunakan command `ping lipi.go.id`
@@ -35,7 +36,8 @@ Pertama kita melakukan pengecekan ip pada website lipi.go.id ke dalam terminal d
 Lalu didapat ip 203.160.128.158 sehingga
 ```
 ip.dst== 203.160.128.158 || ip.dst== 203.160.128.158
-```<img width="960" alt="modul1-6 2" src="https://user-images.githubusercontent.com/58323466/192100424-6cd4552e-1cd9-4f76-8fe1-bc43a07b52e0.png">
+```
+<img width="960" alt="modul1-6 2" src="https://user-images.githubusercontent.com/58323466/192100424-6cd4552e-1cd9-4f76-8fe1-bc43a07b52e0.png">
 
 
 ## Soal 7-10

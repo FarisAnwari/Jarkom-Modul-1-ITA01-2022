@@ -20,7 +20,9 @@ Sebelumnya praktikan menginput command [ip a] di terminal untuk mengetahui IP pr
 Sehingga didapat IP praktikan ialah `192.168.89.130`.
 
 Capture Filter: 
-> src host 192.168.89.130
+```
+src host 192.168.89.130
+```
 
 ![capture](./img/7_cap.jpg)
 
@@ -44,7 +46,21 @@ Dari percakapan ini, praktikan memeroleh informasi penting perihal kecurangan, b
 - Password ialah nama karakter anime kembar lima
 - Pengiriman file lewat port 9002
 
-Praktikan menyimpulkan bahwa nama karakter anime kembar lima ialah `nakano` dari Gotoubun no Hanayome.
+Praktikan menyimpulkan bahwa nama karakter anime kembar lima ialah `nakano` dari Gotoubun no Hanayome. Kemudian praktikan mencoba mencari paket yang berasal dari port 9002 dengan display filter berikut:
+
+```
+tcp.srcport == 9002
+```
+![filter 9002](/img/9_9002.jpg)
+
+Praktikan lalu mengfollow TCP stream paket-paket tersebut.
+![link youtube](/img/9_yutub.jpg)
+
+Rupanya ini merupakan jejak palsu. Praktikan tertipu oleh link-link palsu tersebut, dan diarahkan menuju video meme. Disinilah letak kendala yang praktikan alami. Setelah pertimbangan lebih lanjut, praktikan menggunakan filter:
+```
+tcp.dstport == 9002
+```
+
 
 ---
 

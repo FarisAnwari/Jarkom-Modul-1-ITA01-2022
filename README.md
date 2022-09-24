@@ -46,24 +46,49 @@ Dari percakapan ini, praktikan memeroleh informasi penting perihal kecurangan, b
 - Password ialah nama karakter anime kembar lima
 - Pengiriman file lewat port 9002
 
+---
+
+### 9. Terdapat laporan adanya pertukaran file yang dilakukan oleh kedua mahasiswa dalam percakapan yang diperoleh, carilah file yang dimaksud! Untuk memudahkan laporan kepada atasan, beri nama file yang ditemukan dengan format [nama_kelompok].des3 dan simpan output file dengan nama “flag.txt”.
+
 Praktikan menyimpulkan bahwa nama karakter anime kembar lima ialah `nakano` dari Gotoubun no Hanayome. Kemudian praktikan mencoba mencari paket yang berasal dari port 9002 dengan display filter berikut:
 
 ```
 tcp.srcport == 9002
 ```
+
 ![filter 9002](/img/9_9002.jpg)
 
 Praktikan lalu mengfollow TCP stream paket-paket tersebut.
+
 ![link youtube](/img/9_yutub.jpg)
 
 Rupanya ini merupakan jejak palsu. Praktikan tertipu oleh link-link palsu tersebut, dan diarahkan menuju video meme. Disinilah letak kendala yang praktikan alami. Setelah pertimbangan lebih lanjut, praktikan menggunakan filter:
+
 ```
 tcp.dstport == 9002
 ```
 
+![true trail](/img/9_9002real.jpg)
+
+Praktikan mengfollow TCP Stream dan mendapatkan *jackpot*
+
+![file salt](/img/9_salt.jpg)
+
+Praktikan mengubah tipe data menjadi raw dan menyimpannya sebagai `ITA02.des3`, lalu mendecryptnya menggunakan openssl dengan password `nakano`
+
+![decryption](/img/9_decrypt.jpg)
 
 ---
 
-### 9. Terdapat laporan adanya pertukaran file yang dilakukan oleh kedua mahasiswa dalam percakapan yang diperoleh, carilah file yang dimaksud! Untuk memudahkan laporan kepada atasan, beri nama file yang ditemukan dengan format [nama_kelompok].des3 dan simpan output file dengan nama “flag.txt”.
-
 ### 10. Temukan password rahasia (flag) dari organisasi bawah tanah yang disebutkan di atas!
+
+Praktikan membuka file flag.txt dan mendapat password rahasia sebagaimana berikut:
+
+![flag](/img/10_flag.jpg)
+
+---
+
+### Kendala yang Dialami
+
+- Praktikan sempat terhambat dalam mencari file salt yang dikirim di port 9002, hingga praktikan menyadari bahwa bisa saja file dikirim *kepada* port 9002, bukan hanya *dari* port 9002
+- Praktikan juga terkendala dalam mengdecrypt file salt, dimana praktikan mengsolve kendala ini dengan mencari syntax openssl yang sesuai di [https://osxdaily.com/2012/01/30/encrypt-and-decrypt-files-with-openssl/](https://osxdaily.com/2012/01/30/encrypt-and-decrypt-files-with-openssl/)
